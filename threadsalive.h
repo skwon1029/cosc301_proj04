@@ -10,17 +10,17 @@
    *************************** */
 
 typedef struct {
-
+    int val;
 } tasem_t;
 
 typedef struct {
-
+    tasem_t bin_sem;
 } talock_t;
 
 typedef struct {
-
+    tasem_t con_sem;
+    talock_t con_lock;
 } tacond_t;
-
 
 /* ***************************
        stage 1 functions
